@@ -23,10 +23,7 @@ function App() {
                 "BDBB99",
                 "#472E32"
             ];
-        
-
-
-
+    
         let randIndex = Math.floor(Math.random() * quotes.length)
         let randColorIndex = Math.floor(Math.random() * colors.length)
             setRandomQuote(quotes[randIndex])
