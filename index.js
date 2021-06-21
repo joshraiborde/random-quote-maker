@@ -2,6 +2,7 @@ function App() {
 
     const [quotes, setQuotes] = React.useState([])
     const [randomQuote, setRandomQuote] = React.useState("")
+    const [color, setColor] = React.useState("#fff")
 
     React.useEffect(() => {
         async function fetchData() {
@@ -16,11 +17,24 @@ function App() {
     }, [])
 
     const getNewQuote = () => {
+
+            const colors = [
+                "#73A857",
+                "BDBB99",
+                "#472E32"
+            ];
+        
+
+
+
         let randIndex = Math.floor(Math.random() * quotes.length)
+        let randColorIndex = Math.floor(Math.random() * colors.length)
             setRandomQuote(quotes[randIndex])
+            setColor(colors[randColorIndex])
     }
 
     return (
+        <div style={{backgroundColor: color, minHeight: "100vh"}}>
         <div className="contianer pt-5">
             <div className="jumbotron">
                 <div className="card">
@@ -61,7 +75,7 @@ function App() {
         </div>
         </div>
         </div>
-
+</div>
     );
 }
 
