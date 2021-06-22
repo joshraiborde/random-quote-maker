@@ -19,9 +19,8 @@ function App() {
     const getNewQuote = () => {
 
             const colors = [
-                "#73A857",
-                "BDBB99",
-                "#472E32"
+                "#73A857", "BDBB99", "#472E32", "#FFC0CB", "#DA70D6", "#4169E1", "#AFEEEE", "#228B22", "#FF6347", "#DC143C", "#FFA07A",
+                "#C71585", "#6B8E23"
             ];
     
         let randIndex = Math.floor(Math.random() * quotes.length)
@@ -35,7 +34,7 @@ function App() {
         <div className="contianer pt-5">
             <div className="jumbotron">
                 <div className="card">
-                    <div className="card-header">Inspiriational Quotes:</div>
+                    <div className="card-header">Quotable Quotes:</div>
                     <div className="card-body">
                     {randomQuote ? (
                         <>
@@ -43,7 +42,7 @@ function App() {
                     <p className="card-text"> &quot;{randomQuote.text}&quot;</p>
                         </>
                     ) : (
-                        <h2>Loading</h2>
+                        <h2>Loading...</h2>
                     )}
                     <div className="row">
                     <button onClick={getNewQuote} className="btn btn-primary">New Quote</button>
