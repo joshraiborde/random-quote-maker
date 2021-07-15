@@ -30,6 +30,7 @@ function App() {
     }
 
     return (
+        <main id='quote-box'>
         <div style={{backgroundColor: color, minHeight: "100vh"}}>
             <div className="contianer pt-5">
                 <div className="jumbotron">
@@ -38,20 +39,20 @@ function App() {
                             <div className="card-body">
                                 {randomQuote ? (
                                 <>
-                                <h5 className="card-title">- {randomQuote.author || "No Author" }</h5>
-                                    <p className="card-text"> &quot;{randomQuote.text}&quot;</p>
+                                <h5 id="author">- {randomQuote.author || "No Author" }</h5>
+                                    <p id="text"> &quot;{randomQuote.text}&quot;</p>
                                 </>
                                 ) : (
                                 <h2>Loading...</h2>
                                 )}
                                     <div className="row">
-                                        <button onClick={getNewQuote} className="btn btn-primary">New Quote</button>
+                                        <button onClick={getNewQuote} id="new-quote">New Quote</button>
                                         <a href={
                                             "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
                                             encodeURIComponent(
                                                 '"' + randomQuote.text + '"' + randomQuote.author
                                             )
-                                            } target="_blank" className="btn btn-warning">
+                                            } target="_blank" id="tweet-quote">
                                             <i className="fa fa-twitter"></i>
                                         </a>
                                         <a href={
@@ -69,6 +70,7 @@ function App() {
                 </div>
             </div>
         </div>
+        </main>
     );
 }
 

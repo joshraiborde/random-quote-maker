@@ -1,3 +1,13 @@
 *{
     transition: all 0.2s ease-in-out;
 }
+
+
+/* .row #new-tweet{
+    margin-left: center;
+    margin-right: center;
+} */
+
+#quote-box .contianer.pt-5 .jumbotron .card .card-body .row #tweet-quote {
+    text-align: center;
+}
